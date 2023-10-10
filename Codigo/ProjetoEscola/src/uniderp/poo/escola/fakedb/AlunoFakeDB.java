@@ -2,21 +2,12 @@ package uniderp.poo.escola.fakedb;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-
 import uniderp.poo.escola.dominio.Aluno;
 
-public class AlunoFakeDB {
-    private ArrayList<Aluno> tabela;
+public class AlunoFakeDB extends BaseGenericaFakeDB<Aluno> {
 
-    // Design Pattern Singleton
-    public ArrayList<Aluno> getTabela() {
-        if (this.tabela == null) {
-            this.tabela = new ArrayList<Aluno>();
-        }
-        return this.tabela;
-    }
-
-    private void CarregarDados() {
+    @Override
+    protected void CarregarDados() {
         this.tabela = new ArrayList<Aluno>();
         this.tabela.add(new Aluno(1, LocalDate.now(), "Rua X, 10", "991023456", "Mateus", "123456", "987654",
                 LocalDate.of(1994, 6, 5), "20201001", LocalDate.of(2020, 1, 20)));
@@ -31,6 +22,7 @@ public class AlunoFakeDB {
     }
 
     public AlunoFakeDB() {
-        this.CarregarDados();
+        super();
     }
+
 }

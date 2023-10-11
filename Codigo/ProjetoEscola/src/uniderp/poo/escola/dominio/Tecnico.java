@@ -2,8 +2,11 @@ package uniderp.poo.escola.dominio;
 
 import java.time.LocalDate;
 
-public class Tecnico extends BaseFuncionario {
+public class Tecnico extends BaseFuncionario { // 'Tecnico' é subclasse da classe 'BaseFuncionario' logo herda seus
+                                               // atributos e métodos.
     private String setor;
+
+    // GETTERS E SETTERS
 
     public String getSetor() {
         return setor;
@@ -13,6 +16,12 @@ public class Tecnico extends BaseFuncionario {
         this.setor = setor;
     }
 
+    // MÉTODO CONSTRUTOR.
+    // Este é o construtor da classe 'Tecnico'. Ao criar um objeto 'Tecnico' esse
+    // construtor é chamado para inicializar as informações do Tecnico, incluindo os
+    // herdados da classe
+    // 'BaseFuncionario', além dos atributos específicos da classe 'Tecnico'.
+
     public Tecnico(int codigo, LocalDate dataInsercao, String endereco, String telefone, String nome, String rg,
             String cpf, LocalDate dataNascimento, String cracha, String registro, LocalDate dataVinculoInicial,
             LocalDate dataVinculoFinal, String setor) {
@@ -21,7 +30,8 @@ public class Tecnico extends BaseFuncionario {
         this.setor = setor;
     }
 
-    @Override
+    @Override // Esse método é sobrescrito da classe 'BaseFuncionario' e imprime as
+    // informações sobre o Funcionário.
     public void Imprimir() {
         System.out.println("Codigo: " + this.codigo);
         System.out.println("Nome: " + this.nome);

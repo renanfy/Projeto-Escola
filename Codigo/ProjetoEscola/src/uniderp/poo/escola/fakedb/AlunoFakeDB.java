@@ -4,10 +4,13 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import uniderp.poo.escola.dominio.Aluno;
 
-public class AlunoFakeDB extends BaseGenericaFakeDB<Aluno> {
+public class AlunoFakeDB extends BaseGenericaFakeDB<Aluno> { // Classe genérica, para lidar com objetos do tipo 'Aluno'.
 
         @Override
-        protected void CarregarDados() {
+        protected void CarregarDados() { // @Override indica que está sobreescrevendo um método da classe pai. O método
+                                         // 'CarregarDados()' é um hook
+                                         // que permite carregar dados fictícios na base de dados quando uma instância
+                                         // de 'AlunoFakeDB' é criada ou inicializada.
                 this.tabela = new ArrayList<Aluno>();
                 this.tabela.add(new Aluno(1, LocalDate.now(), "Rua X, 10", "991023456", "Mateus", "123456", "987654",
                                 LocalDate.of(1994, 6, 5), "20201001", LocalDate.of(2020, 1, 20)));
@@ -22,7 +25,10 @@ public class AlunoFakeDB extends BaseGenericaFakeDB<Aluno> {
         }
 
         public AlunoFakeDB() {
-                super();
+                super(); // Chamada ao construtor da classe pai 'BaseGenericaFakeDB', está chamando o
+                         // construtor da classe pai para garantir que
+                         // qualquer inicialização necessário na classe pai seja feita antes de continuar
+                         // com a inicialização específica da classe 'AlunoFakeDB'.
         }
 
 }

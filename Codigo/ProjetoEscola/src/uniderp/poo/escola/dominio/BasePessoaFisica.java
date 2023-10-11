@@ -2,11 +2,14 @@ package uniderp.poo.escola.dominio;
 
 import java.time.LocalDate;
 
-public abstract class BasePessoaFisica extends BasePessoa {
+public abstract class BasePessoaFisica extends BasePessoa { // 'BasePessoaFisica' é subclasse de 'BasePessoa' logo irá
+                                                            // implementar seus métodos e atributos.
     protected String nome;
     protected String rg;
     protected String cpf;
     protected LocalDate dataNascimento;
+
+    // GETTERS E SETTERS
 
     public String getNome() {
         return nome;
@@ -39,6 +42,8 @@ public abstract class BasePessoaFisica extends BasePessoa {
     public void setDataNascimento(LocalDate dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
+
+    // MÉTODO CONSTRUTOR
 
     public BasePessoaFisica(int codigo, LocalDate dataInsercao, String endereco, String telefone, String nome,
             String rg, String cpf, LocalDate dataNascimento) {

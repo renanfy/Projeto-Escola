@@ -2,10 +2,13 @@ package uniderp.poo.escola.dominio;
 
 import java.time.LocalDate;
 
-public class Fornecedor extends BasePessoaJuridica {
+public class Fornecedor extends BasePessoaJuridica { // 'Fornecedor' é subclasse da classe 'BasePessoaJuridica' logo
+                                                     // herda seus atributos e métodos.
     private String servico;
     private LocalDate dataContrato;
     private int periodoEmMeses;
+
+    // GETTERS E SETTERS
 
     public String getServico() {
         return servico;
@@ -31,6 +34,13 @@ public class Fornecedor extends BasePessoaJuridica {
         this.periodoEmMeses = periodoEmMeses;
     }
 
+    // MÉTODO CONSTRUTOR.
+    // Este é o construtor da classe 'Fornecedor'. Ao criar um objeto 'Fornecedor'
+    // esse
+    // construtor é chamado para inicializar as informações do aluno, incluindo os
+    // herdados da classe
+    // 'BasePessoaJuridica', além dos atributos específicos da classe 'Fornecedor'.
+
     public Fornecedor(int codigo, LocalDate dataInsercao, String endereco, String telefone, String nomeFantasia,
             String razaoSocial, String cnpj, String ie, LocalDate dataAbertura, String servico, LocalDate dataContrato,
             int periodoEmMeses) {
@@ -40,7 +50,8 @@ public class Fornecedor extends BasePessoaJuridica {
         this.periodoEmMeses = periodoEmMeses;
     }
 
-    @Override
+    @Override // Esse método é sobrescrito da classe 'BasePessoaJuridica' e imprime as
+    // informações sobre o Fornecedor.
     public void Imprimir() {
         System.out.println("Codigo: " + this.codigo);
         System.out.println("Data de Inserção:" + this.dataInsercao);

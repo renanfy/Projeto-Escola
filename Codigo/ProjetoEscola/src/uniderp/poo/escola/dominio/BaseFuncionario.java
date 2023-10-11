@@ -8,6 +8,8 @@ public abstract class BaseFuncionario extends BasePessoaFisica {
     protected LocalDate dataVinculoInicial;
     protected LocalDate dataVinculoFinal;
 
+    // GETTERS E SETTERS
+
     public String getCracha() {
         return cracha;
     }
@@ -40,6 +42,8 @@ public abstract class BaseFuncionario extends BasePessoaFisica {
         this.dataVinculoFinal = dataVinculoFinal;
     }
 
+    // METÓDO CONSTRUTOR
+
     public BaseFuncionario(int codigo, LocalDate dataInsercao, String endereco, String telefone, String nome, String rg,
             String cpf, LocalDate dataNascimento, String cracha, String registro, LocalDate dataVinculoInicial,
             LocalDate dataVinculoFinal) {
@@ -50,3 +54,12 @@ public abstract class BaseFuncionario extends BasePessoaFisica {
         this.dataVinculoFinal = dataVinculoFinal;
     }
 }
+
+// O propósito dessa classe é fornecer uma base comum para as classes que
+// representam funcionários na aplicação. Ela contém os atributos e métodos
+// comuns a todos os funcionários, como crachá, registro, datas de início e
+// término do vínculo. Por ser uma classe abstrata, espera-se que classes
+// concretas que representem tipos específicos de funcionários estendam essa
+// classe e forneçam implementações específicas para seus métodos abstratos e
+// adicionem mais detalhes conforme necessário para o tipo de funcionário que
+// estão representando.

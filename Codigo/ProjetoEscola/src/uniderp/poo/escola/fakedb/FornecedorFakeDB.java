@@ -5,9 +5,10 @@ import java.util.ArrayList;
 
 import uniderp.poo.escola.dominio.Fornecedor;
 
-public class FornecedorFakeDB extends BaseGenericaFakeDB<Fornecedor> {
+public class FornecedorFakeDB extends BaseGenericaFakeDB<Fornecedor> { // Subclasse da classe 'BaseGenericaFakeDB'
+                                                                       // parametrizada com o tipo 'Fornecedor'.
 
-    @Override
+    @Override // Método sobrescrito da classe pai, está substituindo um método da classe pai.
     protected void CarregarDados() {
         this.tabela = new ArrayList<Fornecedor>();
         this.tabela.add(new Fornecedor(9977, LocalDate.now(), "Rua da Garrafa, 51", "67999999999", "Nome Fantasia",
@@ -18,7 +19,9 @@ public class FornecedorFakeDB extends BaseGenericaFakeDB<Fornecedor> {
                 LocalDate.of(2014, 2, 29), 12));
     }
 
-    public FornecedorFakeDB() {
-        super();
+    public FornecedorFakeDB() { // Método construtor da classe 'FornecedorFakeDB'. Quando um objeto dessa classe
+                                // é criado, ele inicializa a tabela chamando 'CarregarDados()'.
+        super(); // O construtor chama o construtor da classe pai usando 'super()' e isso garante
+                 // que a tabela seja inicializada.
     }
 }

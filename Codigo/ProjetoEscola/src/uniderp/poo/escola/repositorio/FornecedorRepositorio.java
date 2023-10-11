@@ -5,7 +5,7 @@ import uniderp.poo.escola.fakedb.FornecedorFakeDB;
 
 public class FornecedorRepositorio extends BaseGenericaCRUD<FornecedorFakeDB, Fornecedor> {
 
-    public FornecedorRepositorio(){
+    public FornecedorRepositorio() {
         this.db = new FornecedorFakeDB();
         this.dataset = this.db.getTabela();
     }

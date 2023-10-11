@@ -5,7 +5,7 @@ import uniderp.poo.escola.fakedb.AlunoFakeDB;
 
 public class AlunoRepositorio extends BaseGenericaCRUD<AlunoFakeDB, Aluno> {
 
-    public AlunoRepositorio(){
+    public AlunoRepositorio() {
         this.db = new AlunoFakeDB();
         this.dataset = this.db.getTabela();
     }

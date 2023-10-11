@@ -5,6 +5,11 @@ import uniderp.poo.escola.fakedb.TecnicoFakeDB;
 
 public class TecnicoRepositorio extends BaseGenericaCRUD<TecnicoFakeDB, Tecnico> {
 
+    public TecnicoRepositorio() {
+        this.db = new TecnicoFakeDB();
+        this.dataset = this.db.getTabela();
+    }
+
     @Override
     public Tecnico Create(Tecnico instancia) {
         int tam = this.dataset.size() - 1;

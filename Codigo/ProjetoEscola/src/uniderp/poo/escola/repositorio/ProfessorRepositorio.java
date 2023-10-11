@@ -5,6 +5,11 @@ import uniderp.poo.escola.fakedb.ProfessorFakeDB;
 
 public class ProfessorRepositorio extends BaseGenericaCRUD<ProfessorFakeDB, Professor> {
 
+    public ProfessorRepositorio() {
+        this.db = new ProfessorFakeDB();
+        this.dataset = this.db.getTabela();
+    }
+
     @Override
     public Professor Create(Professor instancia) {
         int tam = this.dataset.size() - 1;

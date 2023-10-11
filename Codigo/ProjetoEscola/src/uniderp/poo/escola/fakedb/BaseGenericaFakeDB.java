@@ -16,6 +16,7 @@ public abstract class BaseGenericaFakeDB<TDominio> {
     protected abstract void CarregarDados();
 
     public BaseGenericaFakeDB() {
+        this.tabela = new ArrayList<TDominio>();
         this.CarregarDados();
     }
 }

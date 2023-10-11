@@ -25,7 +25,7 @@ public class Professor extends BaseFuncionario {
     public void Imprimir() {
         System.out.println("Codigo: " + this.codigo);
         System.out.println("Nome: " + this.nome);
-        System.out.println("Endereço: " + this.nome);
+        System.out.println("Endereço: " + this.endereco);
         System.out.println("Telefone: " + this.telefone);
         System.out.println("RG: " + this.rg);
         System.out.println("CPF: " + this.cpf);

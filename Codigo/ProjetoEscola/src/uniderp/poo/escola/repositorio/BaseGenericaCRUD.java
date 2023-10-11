@@ -3,14 +3,21 @@ package uniderp.poo.escola.repositorio;
 import java.util.ArrayList;
 
 public abstract class BaseGenericaCRUD<TFakeDB, TDominio> {
-    public abstract void Create(TDominio instancia);
 
-    public abstract void Read(int codigo);
+    protected TFakeDB db;
 
-    public abstract ArrayList<TDominio> ReadAll();
+    protected ArrayList<TDominio> dataset;
 
-    public abstract void Update(TDominio instancia);
+    public abstract TDominio Create(TDominio instancia);
 
-    public abstract void Delete(int codigo);
+    public abstract TDominio Read(int codigo);
+
+    public ArrayList<TDominio> ReadAll() {
+        return this.dataset;
+    }
+
+    public abstract TDominio Update(TDominio instancia);
+
+    public abstract TDominio Delete(int codigo);
 
 }
